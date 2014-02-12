@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	元数据a,b,c,d,e,f,g...
+		组成权限的字符串abcdefrh...
+		页面控制popodom.contains("a");是否具有权限
+	现数据aa,ab,ac,ad,ae...az,ba,bb,bc...bz,ca,cb,cc...cz,......
+		数据库中存储结构，即组成权限的字符串popedom=aa@ab@ac......
+		页面控制popedom.contains("aa")是否具有权限
+		或者String[] dom = popedom.split("@")
+			dom[i].equals("aa");
+ -->
+<ElecData>
+
+  <Function>
+     <FunctionCode>a</FunctionCode>
+     <FunctionName>仪器设备管理</FunctionName>
+     <ParentCode>device</ParentCode>
+     <ParentName>技术设施维护管理</ParentName>
+  </Function>    
+  <Function>
+     <FunctionCode>b</FunctionCode>
+     <FunctionName>设备校准检修</FunctionName>
+     <ParentCode>device</ParentCode>
+     <ParentName>技术设施维护管理</ParentName>
+  </Function>  
+  <Function>
+     <FunctionCode>c</FunctionCode>
+     <FunctionName>设备购置计划</FunctionName>
+     <ParentCode>device</ParentCode>
+     <ParentName>技术设施维护管理</ParentName>
+  </Function>
+
+  <Function>
+     <FunctionCode>d</FunctionCode>
+     <FunctionName>资料图纸管理</FunctionName>
+     <ParentCode>informationAndPaper</ParentCode>
+     <ParentName>技术资料图纸管理</ParentName>
+  </Function> 
+
+  <Function>
+     <FunctionCode>e</FunctionCode>
+     <FunctionName>站点基本信息</FunctionName>
+     <ParentCode>station</ParentCode>
+     <ParentName>站点设备运行管理</ParentName>
+  </Function> 
+  <Function>
+     <FunctionCode>f</FunctionCode>
+     <FunctionName>运行情况</FunctionName>
+     <ParentCode>station</ParentCode>
+     <ParentName>站点设备运行管理</ParentName>
+  </Function>  
+  <Function>
+     <FunctionCode>g</FunctionCode>
+     <FunctionName>维护情况</FunctionName>
+     <ParentCode>station</ParentCode>
+     <ParentName>站点设备运行管理</ParentName>
+  </Function> 
+  
+  <Function>
+     <FunctionCode>h</FunctionCode>
+     <FunctionName>监测台建筑管理</FunctionName>
+     <ParentCode>jct</ParentCode>
+     <ParentName>监测台建筑管理</ParentName>
+  </Function>
+     
+  <Function>
+     <FunctionCode>i</FunctionCode>
+     <FunctionName>角色管理</FunctionName>
+     <ParentCode>sysmng</ParentCode>
+     <ParentName>系统管理</ParentName>
+  </Function>
+  <Function>
+     <FunctionCode>j</FunctionCode>
+     <FunctionName>待办事宜</FunctionName>
+     <ParentCode>sysmng</ParentCode>
+     <ParentName>系统管理</ParentName>
+  </Function>	  
+  <Function>
+     <FunctionCode>k</FunctionCode>
+     <FunctionName>数据字典维护</FunctionName>
+     <ParentCode>sysmng</ParentCode>
+     <ParentName>系统管理</ParentName>
+  </Function> 
+       
+<Function>
+     <FunctionCode>l</FunctionCode>
+     <FunctionName>新增功能</FunctionName>
+     <ParentCode>operate</ParentCode>
+     <ParentName>操作权限分配</ParentName>
+  </Function>
+  <Function>
+     <FunctionCode>m</FunctionCode>
+     <FunctionName>删除功能</FunctionName>
+     <ParentCode>operate</ParentCode>
+     <ParentName>操作权限分配</ParentName>
+  </Function>  
+  <Function>
+     <FunctionCode>n</FunctionCode>
+     <FunctionName>编辑功能</FunctionName>
+     <ParentCode>operate</ParentCode>
+     <ParentName>操作权限分配</ParentName>
+  </Function>
+
+
+</ElecData>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>	
+  <!-- 系统中添加过滤器 -->
+  <filter>
+  	<filter-name>filter</filter-name>
+  	<filter-class>cn.jiangxi.elec.filter.LogonFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>filter</filter-name>
+  	<url-pattern>*.do</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>filter</filter-name>
+  	<url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  <filter>
+  	<filter-name>struts2</filter-name>
+  	<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>struts2</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>checkLogonName</servlet-name>
+    <servlet-class>cn.jiangxi.elec.servlet.CheckLogonName</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>checkLogonName</servlet-name>
+    <url-pattern>/CheckLogonName</url-pattern>
+  </servlet-mapping>
+  <!-- session的失效时间 30分钟 -->
+  <session-config>
+  	<session-timeout>30</session-timeout>
+  </session-config>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.jiangxi.elec.domain.ElecUser" table="Elec_User">
+		<id name="userID" type="string">
+			<column name="userID" not-null="true"></column>
+			<generator class="uuid"/>
+		</id>
+		<property name="jctID" type="string">
+			<column name="jctID" ></column>
+		</property>
+		<property name="userName" type="string">
+			<column name="userName" length="50"></column>
+		</property>
+		<property name="logonName" type="string">
+			<column name="logonName"></column>
+		</property>
+		<property name="logonPwd" type="string">
+			<column name="logonPwd"></column>
+		</property>
+		<property name="sexID" type="string">
+			<column name="sexID"></column>
+		</property>
+		<property name="birthday" type="date">
+			<column name="birthday"></column>
+		</property>
+		<property name="address" type="string">
+			<column name="address"></column>
+		</property>
+		<property name="contactTel" type="string">
+			<column name="contactTel"></column>
+		</property>
+		<property name="email" type="string">
+			<column name="email"></column>
+		</property>
+		<property name="mobile" type="string">
+			<column name="mobile"></column>
+		</property>
+		<property name="isDuty" type="string">
+			<column name="isDuty"></column>
+		</property>
+		<property name="onDutyDate" type="date">
+			<column name="onDutyDate"></column>
+		</property>
+		<property name="offDutyDate" type="date">
+			<column name="offDutyDate"></column>
+		</property>
+		<property name="remark" type="string">
+			<column name="remark"></column>
+		</property>
+		
+	</class>
+</hibernate-mapping>
